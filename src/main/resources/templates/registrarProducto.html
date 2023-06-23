@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+		<title>Registro</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row d-flex justify-content-center mt-5">
+				<div class="col-12 col-md-8 col-lg-6 col-xl-5">
+					<div class="card py-3 px-2">
+						<h5 class="card-title text-center">Registrar nuevo producto</h5>
+						<form method="post" th:action="@{/registrar}" th:object="${producto}">
+							<div class="form-group">
+								<input type="text" id="nomPrd" th:field="*{nomPrd}" class="form-control" placeholder="Nombre" required autofocus>
+							</div>
+							<div class="form-group">
+								<textarea th:field="*{desPrd}" class="form-control" placeholder="Descripción" required></textarea>
+							</div>
+							<div class="form-group">
+								<div th:if=${param.exito} class="alert alert-success">Producto Registrado</div>
+							</div>
+							<div class="form-group d-flex justify-content-around">
+								<button type="submit" class="btn btn-success btn-lg">Guardar</button>
+								<a th:href="@{/constancia}" class="btn btn-secondary btn-lg" >Generar Constancia</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

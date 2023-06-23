@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="producto_report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="82036077-19e3-4476-a1c1-b9fdf3a13606">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="nomPrd" class="java.lang.String"/>
+	<parameter name="desPrd" class="java.lang.String"/>
+	<parameter name="fchPrd" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="65" splitType="Stretch">
+			<staticText>
+				<reportElement x="185" y="3" width="190" height="60" uuid="be6c27b3-9abc-4e29-9d89-8e90134e1e12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Nuevo producto generado]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="55" splitType="Stretch">
+			<textField>
+				<reportElement x="140" y="9" width="300" height="40" uuid="c2498053-bd57-4474-87ad-dc7896ff8dc4"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nomPrd}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="100" splitType="Stretch">
+			<textField>
+				<reportElement x="80" y="4" width="400" height="90" uuid="ceb0c7ab-c7ef-47e0-81df-43b276dc4947"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{desPrd}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="80" splitType="Stretch">
+			<textField>
+				<reportElement x="208" y="5" width="142" height="65" uuid="4593b415-9391-4085-95ee-f61a699c0146"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Fecha: " + $P{fchPrd}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
